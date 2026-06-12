@@ -1,115 +1,333 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <title>Career | Best Tycoon (BD) Enterprise Limited</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', sans-serif; background: #f8f9fa; }
-
-        /* Navbar */
-        nav { background: #0056b3; color: white; padding: 15px 10%; display: flex; justify-content: space-between; align-items: center; }
-        .nav-links a { color: white; margin-left: 20px; text-decoration: none; font-size: 0.9rem; font-weight: 500; }
-        .apply-btn { background: #ff9900; padding: 8px 20px; border-radius: 4px; }
-
-        /* Hero */
-        .hero { 
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero-bg.jpg');
-            background-size: cover; background-position: center; height: 450px; 
-            display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center;
-        }
-
-        /* Wrapper */
-        .wrapper { max-width: 1000px; margin: -100px auto 40px; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-        .benefits { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin-bottom: 40px; }
-        .card { text-align: center; padding: 15px 5px; border: 1px solid #eee; border-radius: 6px; }
-        .card h3 { font-size: 0.9rem; color: #0056b3; }
-        .card p { font-size: 0.75rem; color: #666; }
-
-        /* Growth & Gallery Section */
-        .growth-box { background: #0056b3; color: white; padding: 30px; border-radius: 8px; margin-bottom: 30px; }
-        .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 30px; }
-        .gallery img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; }
-
-        /* Footer */
-        footer { background: #fff; padding: 40px 10%; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 20px; border-top: 2px solid #eee; }
-        .social-icons a { margin-right: 10px; color: #555; text-decoration: none; font-weight: bold; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Best Tycoon | Internal Career – vivo Authorized Partner</title>
+  <!-- Tailwind CSS + Google Fonts + Font Awesome -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * { font-family: 'Inter', sans-serif; }
+    body { background: #fefefe; scroll-behavior: smooth; }
+    .benefit-card { transition: all 0.25s ease; }
+    .benefit-card:hover { transform: translateY(-6px); box-shadow: 0 20px 25px -12px rgba(0, 0, 0, 0.12); }
+    .job-table-wrapper { overflow-x: auto; }
+    .job-table { min-width: 680px; }
+    .process-step { transition: all 0.2s; }
+    .process-step:hover { transform: translateY(-4px); }
+    .btn-primary { transition: all 0.2s; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 20px -5px rgba(0, 112, 243, 0.3); }
+    .modal-overlay { transition: opacity 0.2s ease; }
+    .modal-container { transition: transform 0.2s ease, opacity 0.2s ease; }
+    /* Hero background with image */
+    .hero-bg {
+      background-image: linear-gradient(105deg, rgba(10,43,62,0.85) 0%, rgba(26,75,110,0.85) 100%), url('images/hero-bg.jpg');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+  </style>
 </head>
-<body>
+<body class="antialiased">
 
-    <nav>
-        <div class="logo" style="font-weight:bold;">BEST TYCOON (BD) Enterprise Limited</div>
-        <div class="nav-links">
-            <a href="#">Home</a><a href="#">Jobs</a><a href="#">Life at Company</a><a href="#" class="apply-btn">Apply Now</a>
-        </div>
-    </nav>
-
-    <header class="hero">
-        <h1>Build Your Career With Us</h1>
-        <p>Join the Best Tycoon family - vivo Authorized Partner</p>
-    </header>
-
-    <div class="wrapper">
-        <h2 style="text-align:center; margin-bottom:25px;">Why Work With Us?</h2>
-        <div class="benefits">
-            <div class="card"><h3>Growth</h3><p>Career</p></div>
-            <div class="card"><h3>Learning</h3><p>Training</p></div>
-            <div class="card"><h3>Salary</h3><p>Competitive</p></div>
-            <div class="card"><h3>Team</h3><p>Inclusive</p></div>
-            <div class="card"><h3>Health</h3><p>Benefits</p></div>
-            <div class="card"><h3>Award</h3><p>Rewards</p></div>
+  <!-- ========== HEADER / NAVBAR ========== -->
+  <header class="bg-white/95 backdrop-blur-sm shadow-sm sticky top-0 z-50 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="flex justify-between items-center py-3 md:py-4">
+        <!-- Logo + Company -->
+        <div class="flex items-center gap-2">
+          <div class="w-9 h-9 bg-gradient-to-br from-blue-800 to-cyan-700 rounded-xl flex items-center justify-center shadow-md">
+            <i class="fas fa-crown text-white text-lg"></i>
+          </div>
+          <div>
+            <h1 class="text-xl md:text-2xl font-extrabold tracking-tight text-gray-800">Best<span class="text-blue-700">Tycoon</span></h1>
+            <p class="text-[10px] md:text-xs text-gray-500 -mt-0.5 font-medium">vivo Authorized Partner | Exclusive recruitment hub</p>
+          </div>
         </div>
 
-        <div class="growth-box">
-            <h3>Career Growth & Development</h3>
-            <p style="margin-top:10px;">We invest in our people. Through mentorship, skill-building workshops, and internal promotion paths, we ensure that every employee at Best Tycoon (BD) Enterprise Limited grows professionally and personally.</p>
-        </div>
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center space-x-7">
+          <a href="#home" class="nav-link text-gray-700 hover:text-blue-700 font-medium">Home</a>
+          <a href="#jobs" class="nav-link text-gray-700 hover:text-blue-700 font-medium">Jobs</a>
+          <a href="#departments" class="nav-link text-gray-700 hover:text-blue-700 font-medium">Departments</a>
+          <a href="#life" class="nav-link text-gray-700 hover:text-blue-700 font-medium">Life at Company</a>
+          <a href="#journey" class="nav-link text-gray-700 hover:text-blue-700 font-medium">Recruitment Journey</a>
+          <a href="#faq" class="nav-link text-gray-700 hover:text-blue-700 font-medium">FAQ</a>
+          <a href="#contact" class="nav-link text-gray-700 hover:text-blue-700 font-medium">Contact Us</a>
+        </nav>
 
-        <h3 style="margin-bottom:15px;">Life at Best Tycoon</h3>
-        <div class="gallery">
-            <img src="images/team.jpg" alt="Team Work">
-            <img src="images/engagement.jpg" alt="Engagement">
-            <img src="images/factory.jpg" alt="Factory">
-        </div>
+        <!-- Mobile menu button -->
+        <button id="mobileMenuBtn" class="lg:hidden text-gray-700 focus:outline-none text-2xl">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
 
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; border-top: 2px solid #eee; padding-top: 20px;">
-            <div><h3>Current Job Opportunities</h3><p style="margin-top:10px;">Production Engineer | HR Officer | Factory Supervisor | Quality Control</p></div>
-            <div><h3>Recruitment Journey</h3><p style="margin-top:10px;">Application → Screening → Assessment → Interview → Selection → Onboarding</p></div>
+      <!-- Mobile drawer menu -->
+      <div id="mobileDrawer" class="lg:hidden hidden pb-6 pt-2 border-t border-gray-100 mt-1">
+        <div class="flex flex-col space-y-3 text-base">
+          <a href="#home" class="py-2 px-2 hover:bg-gray-50 rounded-lg">Home</a>
+          <a href="#jobs" class="py-2 px-2 hover:bg-gray-50 rounded-lg">Jobs</a>
+          <a href="#departments" class="py-2 px-2 hover:bg-gray-50 rounded-lg">Departments</a>
+          <a href="#life" class="py-2 px-2 hover:bg-gray-50 rounded-lg">Life at Company</a>
+          <a href="#journey" class="py-2 px-2 hover:bg-gray-50 rounded-lg">Recruitment Journey</a>
+          <a href="#faq" class="py-2 px-2 hover:bg-gray-50 rounded-lg">FAQ</a>
+          <a href="#contact" class="py-2 px-2 hover:bg-gray-50 rounded-lg">Contact Us</a>
         </div>
+      </div>
     </div>
+  </header>
 
-    <footer><button onclick="document.getElementById('id01').style.display='block'">Apply Now</button>
+  <main>
+    <!-- ========== HERO SECTION with Background Image (circle removed) ========== -->
+    <section id="home" class="hero-bg text-white relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-20 md:py-28 flex flex-col md:flex-row items-center justify-between gap-10">
+        <div class="flex-1 text-center md:text-left">
+          <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-1.5 text-sm font-medium mb-6">
+            <i class="fas fa-handshake text-cyan-200"></i>
+            <span>vivo Authorized Partner | Direct Hiring</span>
+          </div>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">Build Your Career <br><span class="text-cyan-300">With Us</span></h1>
+          <p class="text-gray-200 text-lg mt-6 max-w-xl mx-auto md:mx-0">Join the Best Tycoon family — a vivo authorized partner. We offer growth, innovation, and a people-first culture.</p>
+          <div class="flex flex-wrap gap-4 mt-8 justify-center md:justify-start">
+            <a href="#jobs" class="bg-white text-blue-800 hover:bg-gray-100 font-bold px-7 py-3 rounded-full shadow-lg transition-all btn-primary flex items-center gap-2"><i class="fas fa-arrow-right"></i> Explore Openings</a>
+          </div>
+        </div>
+        <!-- Right side circle completely removed -->
+      </div>
+      <div class="absolute bottom-0 left-0 w-full h-10 bg-gradient-to-t from-gray-50 to-transparent"></div>
+    </section>
 
-<div id="id01" style="display:none; position:fixed; z-index:1; left:0; top:0; width:100%; height:100%; background-color:rgba(0,0,0,0.4);">
-  <div style="background-color:#fefefe; margin:10% auto; padding:20px; border:1px solid #888; width:400px; border-radius:10px;">
-    <span onclick="document.getElementById('id01').style.display='none'" style="float:right; cursor:pointer; font-size:24px;">&times;</span>
-    
-    <h3>Candidate Information</h3>
-    <form action="https://formspree.io/f/mgobngja" method="POST">
-      <input type="text" name="name" placeholder="Full Name" required style="width:100%; margin-bottom:10px; padding:8px;">
-      <input type="email" name="email" placeholder="Email" required style="width:100%; margin-bottom:10px; padding:8px;">
-      <textarea name="message" placeholder="Your Skills/Experience" style="width:100%; margin-bottom:10px; padding:8px;"></textarea>
-      <button type="submit" style="width:100%; padding:10px; background:#28a745; color:white; border:none;">Submit</button>
-    </form>
-  </div>
-</div>
-        <div>
-            <p><strong>Best Tycoon (BD) Enterprise Limited</strong></p>
-            <p>Address: Kusabo Eitola, Rupganj, Narayanganj-1462.</p>
-            <p>Email: recruitment.hr.bdf@vivo.com | Mob: 01703222977</p>
+    <!-- ========== WHY WORK WITH US (benefits) ========== -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+        <div class="text-center mb-12">
+          <span class="text-blue-700 font-semibold text-sm bg-blue-100 px-4 py-1.5 rounded-full"><i class="fas fa-star mr-1"></i> Why Work With Us?</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-4">A workplace that empowers you</h2>
+          <p class="text-gray-500 max-w-2xl mx-auto mt-2">We invest in your success — from career growth to well-being.</p>
         </div>
-        <div><h4>Quick Links</h4><p>About Us<br>Jobs<br>Process</p></div>
-        <div><h4>For Candidates</h4><p>All Jobs<br>Submit CV</p></div>
-        <div>
-            <h4>Follow HR</h4>
-            <div class="social-icons">
-                <a href="https://www.facebook.com/Best.Tycoon.BD">Facebook</a> | 
-                <a href="https://www.instagram.com/best_tycoon_bd">Insta</a> | 
-                <a href="https://wa.me/8801703222977">WhatsApp</a>
-            </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
+          <div class="benefit-card bg-gray-50 p-6 rounded-2xl border border-gray-100 text-center shadow-sm"><div class="w-14 h-14 bg-blue-100 text-blue-700 rounded-xl flex items-center justify-center mx-auto mb-4"><i class="fas fa-chart-line text-2xl"></i></div><h3 class="text-xl font-bold text-gray-800">Career Growth Opportunities</h3><p class="text-gray-500 text-sm mt-2">Internal promotions, leadership tracks, and cross-functional projects.</p></div>
+          <div class="benefit-card bg-gray-50 p-6 rounded-2xl border border-gray-100 text-center shadow-sm"><div class="w-14 h-14 bg-amber-100 text-amber-700 rounded-xl flex items-center justify-center mx-auto mb-4"><i class="fas fa-graduation-cap text-2xl"></i></div><h3 class="text-xl font-bold text-gray-800">Learning & Development</h3><p class="text-gray-500 text-sm mt-2">Certifications, workshops, and vivo training programs.</p></div>
+          <div class="benefit-card bg-gray-50 p-6 rounded-2xl border border-gray-100 text-center shadow-sm"><div class="w-14 h-14 bg-emerald-100 text-emerald-700 rounded-xl flex items-center justify-center mx-auto mb-4"><i class="fas fa-coins text-2xl"></i></div><h3 class="text-xl font-bold text-gray-800">Competitive Compensation</h3><p class="text-gray-500 text-sm mt-2">Attractive salary, performance bonuses, and annual increments.</p></div>
+          <div class="benefit-card bg-gray-50 p-6 rounded-2xl border border-gray-100 text-center shadow-sm"><div class="w-14 h-14 bg-purple-100 text-purple-700 rounded-xl flex items-center justify-center mx-auto mb-4"><i class="fas fa-users text-2xl"></i></div><h3 class="text-xl font-bold text-gray-800">Inclusive Work Environment</h3><p class="text-gray-500 text-sm mt-2">Collaborative culture, diversity, and respect for every voice.</p></div>
+          <div class="benefit-card bg-gray-50 p-6 rounded-2xl border border-gray-100 text-center shadow-sm"><div class="w-14 h-14 bg-rose-100 text-rose-600 rounded-xl flex items-center justify-center mx-auto mb-4"><i class="fas fa-heartbeat text-2xl"></i></div><h3 class="text-xl font-bold text-gray-800">Health & Welfare Benefits</h3><p class="text-gray-500 text-sm mt-2">Medical insurance, wellness programs, and employee assistance.</p></div>
+          <div class="benefit-card bg-gray-50 p-6 rounded-2xl border border-gray-100 text-center shadow-sm"><div class="w-14 h-14 bg-indigo-100 text-indigo-700 rounded-xl flex items-center justify-center mx-auto mb-4"><i class="fas fa-trophy text-2xl"></i></div><h3 class="text-xl font-bold text-gray-800">Recognition & Rewards</h3><p class="text-gray-500 text-sm mt-2">Employee of the month, spot awards, and annual galas.</p></div>
         </div>
+      </div>
+    </section>
+
+    <!-- ========== CURRENT JOB OPPORTUNITIES (Table + Apply buttons) ========== -->
+    <section id="jobs" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+        <div class="text-center mb-10">
+          <span class="text-blue-700 font-semibold text-sm bg-blue-100 px-4 py-1.5 rounded-full"><i class="fas fa-briefcase"></i> open positions</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-4">Current Job Opportunities</h2>
+          <p class="text-gray-500 max-w-2xl mx-auto mt-2">Join our dynamic team at Rupgan, Narayanganj — be part of vivo’s success story.</p>
+        </div>
+
+        <div class="job-table-wrapper bg-white rounded-2xl shadow-md border border-gray-100 p-1">
+          <table class="job-table w-full text-left border-collapse">
+            <thead class="bg-gray-100 text-gray-700 rounded-t-2xl">
+              <tr><th class="px-6 py-4 text-sm font-semibold">Position</th><th class="px-6 py-4 text-sm font-semibold">Department</th><th class="px-6 py-4 text-sm font-semibold">Location</th><th class="px-6 py-4 text-sm font-semibold">Deadline</th><th class="px-6 py-4 text-sm font-semibold text-center">Action</th></tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              <tr><td class="px-6 py-4 font-medium text-gray-800">Production Engineer</td><td class="px-6 py-4 text-gray-600">Manufacturing</td><td class="px-6 py-4 text-gray-600">Rupgan, Narayanganj</td><td class="px-6 py-4 text-gray-500">30 June, 2025</td><td class="px-6 py-4 text-center"><button class="apply-job-btn bg-blue-50 hover:bg-blue-700 text-blue-700 hover:text-white px-4 py-1.5 rounded-full text-sm font-medium transition" data-position="Production Engineer">Apply →</button></td></tr>
+              <tr><td class="px-6 py-4 font-medium text-gray-800">HR Officer</td><td class="px-6 py-4 text-gray-600">Human Resources</td><td class="px-6 py-4 text-gray-600">Rupgan, Narayanganj</td><td class="px-6 py-4 text-gray-500">15 July, 2025</td><td class="px-6 py-4 text-center"><button class="apply-job-btn bg-blue-50 hover:bg-blue-700 text-blue-700 hover:text-white px-4 py-1.5 rounded-full text-sm font-medium transition" data-position="HR Officer">Apply →</button></td></tr>
+              <tr><td class="px-6 py-4 font-medium text-gray-800">Factory Supervisor</td><td class="px-6 py-4 text-gray-600">Operations</td><td class="px-6 py-4 text-gray-600">Rupgan, Narayanganj</td><td class="px-6 py-4 text-gray-500">30 June, 2025</td><td class="px-6 py-4 text-center"><button class="apply-job-btn bg-blue-50 hover:bg-blue-700 text-blue-700 hover:text-white px-4 py-1.5 rounded-full text-sm font-medium transition" data-position="Factory Supervisor">Apply →</button></td></tr>
+              <tr><td class="px-6 py-4 font-medium text-gray-800">Quality Control Technician</td><td class="px-6 py-4 text-gray-600">Quality Assurance</td><td class="px-6 py-4 text-gray-600">Rupgan, Narayanganj</td><td class="px-6 py-4 text-gray-500">10 July, 2025</td><td class="px-6 py-4 text-center"><button class="apply-job-btn bg-blue-50 hover:bg-blue-700 text-blue-700 hover:text-white px-4 py-1.5 rounded-full text-sm font-medium transition" data-position="Quality Control Technician">Apply →</button></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="text-center mt-8"><p class="text-sm text-gray-500"><i class="fas fa-clock"></i> New roles added frequently — check back for more opportunities.</p></div>
+      </div>
+    </section>
+
+    <!-- ========== RECRUITMENT JOURNEY ========== -->
+    <section id="journey" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+        <div class="text-center mb-12"><span class="text-indigo-700 bg-indigo-100 px-4 py-1.5 rounded-full text-sm font-semibold"><i class="fas fa-route"></i> transparent process</span><h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-4">Recruitment Journey</h2><p class="text-gray-500 max-w-2xl mx-auto">Simple, fast, and candidate-friendly hiring experience.</p></div>
+        <div class="flex flex-wrap justify-center gap-6 md:gap-8">
+          <div class="process-step flex flex-col items-center text-center w-36 md:w-40"><div class="w-14 h-14 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold shadow-md">1</div><h4 class="font-bold text-gray-800 mt-3">Application Online</h4><p class="text-xs text-gray-500">Submit via portal</p></div>
+          <div class="process-step flex flex-col items-center text-center w-36 md:w-40"><div class="w-14 h-14 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold shadow-md">2</div><h4 class="font-bold text-gray-800 mt-3">Screening (CV)</h4><p class="text-xs text-gray-500">Initial review</p></div>
+          <div class="process-step flex flex-col items-center text-center w-36 md:w-40"><div class="w-14 h-14 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold shadow-md">3</div><h4 class="font-bold text-gray-800 mt-3">Written/Technical</h4><p class="text-xs text-gray-500">Assessment</p></div>
+          <div class="process-step flex flex-col items-center text-center w-36 md:w-40"><div class="w-14 h-14 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold shadow-md">4</div><h4 class="font-bold text-gray-800 mt-3">Interview</h4><p class="text-xs text-gray-500">In-person/online</p></div>
+          <div class="process-step flex flex-col items-center text-center w-36 md:w-40"><div class="w-14 h-14 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold shadow-md">5</div><h4 class="font-bold text-gray-800 mt-3">Selection Final</h4><p class="text-xs text-gray-500">Decision & offer</p></div>
+          <div class="process-step flex flex-col items-center text-center w-36 md:w-40"><div class="w-14 h-14 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold shadow-md">6</div><h4 class="font-bold text-gray-800 mt-3">Onboarding</h4><p class="text-xs text-gray-500">Offer & joining</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== DEPARTMENTS & LIFE ========== -->
+    <section id="departments" class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+        <div class="text-center mb-10"><span class="text-cyan-700 bg-cyan-100 px-4 py-1 rounded-full text-sm font-semibold"><i class="fas fa-building"></i> inside best tycoon</span><h2 class="text-3xl font-bold text-gray-800 mt-4">Departments & Life at Company</h2></div>
+        <div class="grid md:grid-cols-3 gap-6"><div class="bg-white p-6 rounded-2xl shadow-sm"><i class="fas fa-microchip text-3xl text-blue-600 mb-3"></i><h3 class="text-xl font-bold">Manufacturing</h3><p class="text-gray-500 text-sm">Production, Engineering, Quality Control</p></div><div class="bg-white p-6 rounded-2xl shadow-sm"><i class="fas fa-users text-3xl text-blue-600 mb-3"></i><h3 class="text-xl font-bold">Human Resources</h3><p class="text-gray-500 text-sm">Talent, Operations, Employee Engagement</p></div><div class="bg-white p-6 rounded-2xl shadow-sm"><i class="fas fa-chart-line text-3xl text-blue-600 mb-3"></i><h3 class="text-xl font-bold">Commercial & Sales</h3><p class="text-gray-500 text-sm">vivo Partner Relations, Marketing</p></div></div>
+        <div class="mt-12 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 text-center"><i class="fas fa-camera text-4xl text-blue-500 mb-3"></i><h3 class="text-2xl font-semibold">Life at Best Tycoon</h3><p class="max-w-2xl mx-auto text-gray-600 mt-2">Celebrations, team outings, training sessions, and a supportive family culture. We grow together with vivo’s vision.</p></div>
+      </div>
+    </section>
+
+    <!-- ========== FAQ SECTION ========== -->
+    <section id="faq" class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-5"><div class="text-center mb-10"><span class="text-purple-700 bg-purple-100 px-4 py-1 rounded-full text-sm"><i class="fas fa-question-circle"></i> help & support</span><h2 class="text-3xl font-bold text-gray-800 mt-3">Frequently Asked Questions</h2></div>
+      <div class="space-y-4"><div class="border border-gray-200 rounded-xl p-5 bg-gray-50"><h4 class="font-bold text-gray-800 flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> How can I apply for a position?</h4><p class="text-gray-600 mt-1 text-sm">Click "Apply →" on any job in the Current Job Opportunities table. A popup form will appear where you can submit your details, CV, and photo.</p></div>
+      <div class="border border-gray-200 rounded-xl p-5 bg-gray-50"><h4 class="font-bold text-gray-800 flex items-center gap-2"><i class="fas fa-clock"></i> What is the recruitment timeline?</h4><p class="text-gray-600 mt-1 text-sm">Usually 2-3 weeks from application to offer. We keep candidates informed at each stage.</p></div>
+      <div class="border border-gray-200 rounded-xl p-5 bg-gray-50"><h4 class="font-bold text-gray-800 flex items-center gap-2"><i class="fas fa-laptop"></i> Is there a remote work option?</h4><p class="text-gray-600 mt-1 text-sm">Most roles are based at our Rupgan facility, but some positions offer hybrid flexibility.</p></div></div>
+      </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer id="contact" class="bg-gray-900 text-gray-300 pt-14 pb-6">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+        <div class="grid md:grid-cols-4 gap-8"><div><div class="flex items-center gap-2"><i class="fas fa-crown text-amber-400 text-xl"></i><h3 class="text-white font-bold text-xl">Best Tycoon</h3></div><p class="text-sm text-gray-400 mt-3">(BD) Enterprise Limited<br>vivo Authorized Partner – Exclusive Recruitment Hub</p><div class="flex gap-3 mt-4"><a href="#" class="hover:text-white"><i class="fab fa-facebook-f"></i></a><a href="#" class="hover:text-white"><i class="fab fa-linkedin-in"></i></a><a href="#" class="hover:text-white"><i class="fab fa-whatsapp"></i></a></div></div>
+        <div><h4 class="text-white font-semibold mb-4">Quick Links</h4><ul class="space-y-2 text-sm"><li><a href="#jobs" class="hover:text-white">View All Jobs</a></li><li><a href="#departments" class="hover:text-white">Departments</a></li><li><a href="#journey" class="hover:text-white">Recruitment Process</a></li><li><a href="#faq" class="hover:text-white">FAQ</a></li></ul></div>
+        <div><h4 class="text-white font-semibold mb-4">For Candidates</h4><ul class="space-y-2 text-sm"><li><a href="#" class="hover:text-white">Application tips</a></li><li><a href="#" class="hover:text-white">Walk-in interview schedule</a></li><li><a href="#" class="hover:text-white">Referral program</a></li></ul></div>
+        <div><h4 class="text-white font-semibold mb-4">Follow HR / Contact</h4><ul class="space-y-2 text-sm"><li class="flex gap-2"><i class="fas fa-map-marker-alt mt-1"></i> Kusabo Eitola, Rupgan, Narayanganj-1462</li><li class="flex gap-2"><i class="fas fa-phone-alt"></i> 01703222977</li><li class="flex gap-2"><i class="fas fa-envelope"></i> recruitment.he.bd@vivo.com</li><li class="flex gap-2"><i class="fab fa-whatsapp"></i> WhatsApp: +8801703222977</li></ul></div></div>
+        <div class="border-t border-gray-800 mt-10 pt-6 text-center text-xs text-gray-500"><p>© 2025 Best Tycoon (BD) Enterprise Limited – Internal Recruitment Portal. All rights reserved. | vivo Authorized Partner</p></div>
+      </div>
     </footer>
+  </main>
 
+  <!-- ========== APPLICATION MODAL (POPUP) ========== -->
+  <div id="applicationModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/50 backdrop-blur-sm modal-overlay">
+    <div class="bg-white rounded-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto shadow-2xl mx-4 modal-container">
+      <div class="sticky top-0 bg-white border-b border-gray-200 px-6 py-4 flex justify-between items-center rounded-t-2xl">
+        <h3 class="text-2xl font-bold text-gray-800"><i class="fas fa-user-plus text-blue-600 mr-2"></i> Job Application Form</h3>
+        <button id="closeModalBtn" class="text-gray-400 hover:text-gray-600 text-2xl">&times;</button>
+      </div>
+      <div class="p-6">
+        <form id="applicationForm" enctype="multipart/form-data">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div><label class="block text-sm font-semibold text-gray-700">Full Name *</label><input type="text" id="fullName" required class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2 focus:ring-blue-500 focus:border-blue-500"></div>
+            <div><label class="block text-sm font-semibold text-gray-700">Contact Number *</label><input type="tel" id="contact" required class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2"></div>
+            <div><label class="block text-sm font-semibold text-gray-700">Email Address *</label><input type="email" id="email" required class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2"></div>
+            <div><label class="block text-sm font-semibold text-gray-700">Father's Name</label><input type="text" id="fatherName" class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2"></div>
+            <div><label class="block text-sm font-semibold text-gray-700">Mother's Name</label><input type="text" id="motherName" class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2"></div>
+            <div><label class="block text-sm font-semibold text-gray-700">Education (Degree/Institute)</label><input type="text" id="education" placeholder="e.g. B.Sc in EEE, DIU" class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2"></div>
+            <div class="md:col-span-2"><label class="block text-sm font-semibold text-gray-700">Work Experience (Years & summary)</label><textarea id="experience" rows="2" class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2" placeholder="e.g. 2 years as Production Engineer"></textarea></div>
+            <div class="md:col-span-2"><label class="block text-sm font-semibold text-gray-700">Applying For Position *</label><select id="positionSelect" required class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2 bg-white"><option value="">-- Select Position --</option><option value="Production Engineer">Production Engineer</option><option value="HR Officer">HR Officer</option><option value="Factory Supervisor">Factory Supervisor</option><option value="Quality Control Technician">Quality Control Technician</option></select></div>
+            <div><label class="block text-sm font-semibold text-gray-700">Upload CV (PDF/DOC/DOCX) *</label><input type="file" id="cvFile" accept=".pdf,.doc,.docx" required class="mt-1 w-full border border-gray-300 rounded-xl px-3 py-1.5 file:mr-3 file:py-1 file:px-3 file:rounded-full file:border-0 file:bg-blue-50 file:text-blue-700"></div>
+            <div><label class="block text-sm font-semibold text-gray-700">Passport Size Photo (JPG/PNG)</label><input type="file" id="photoFile" accept="image/jpeg,image/png" class="mt-1 w-full border border-gray-300 rounded-xl px-3 py-1.5 file:mr-3 file:py-1 file:px-3 file:rounded-full file:border-0 file:bg-blue-50"></div>
+          </div>
+          <div class="mt-6 flex justify-end gap-3">
+            <button type="button" id="cancelModalBtn" class="px-5 py-2 border border-gray-300 rounded-full text-gray-700 hover:bg-gray-100">Cancel</button>
+            <button type="submit" class="px-6 py-2 bg-blue-700 hover:bg-blue-800 text-white rounded-full font-semibold shadow-md">Submit Application</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ----- MODAL MANAGEMENT -----
+    const modal = document.getElementById('applicationModal');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const cancelModalBtn = document.getElementById('cancelModalBtn');
+    const positionSelect = document.getElementById('positionSelect');
+    
+    function openModalWithPosition(position = null) {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+      if (position && positionSelect.querySelector(`option[value="${position}"]`)) {
+        positionSelect.value = position;
+      } else {
+        positionSelect.value = "";
+      }
+    }
+    
+    function closeModal() {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = 'auto';
+      document.getElementById('applicationForm').reset();
+    }
+    
+    // ONLY attach to job table apply buttons
+    document.querySelectorAll('.apply-job-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const pos = btn.getAttribute('data-position');
+        openModalWithPosition(pos);
+      });
+    });
+    
+    closeModalBtn.addEventListener('click', closeModal);
+    cancelModalBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => { if(e.target === modal) closeModal(); });
+    
+    // Form submission handler
+    const appForm = document.getElementById('applicationForm');
+    appForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('fullName').value.trim();
+      const contact = document.getElementById('contact').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const father = document.getElementById('fatherName').value;
+      const mother = document.getElementById('motherName').value;
+      const education = document.getElementById('education').value;
+      const experience = document.getElementById('experience').value;
+      const position = document.getElementById('positionSelect').value;
+      const cvFile = document.getElementById('cvFile').files[0];
+      const photoFile = document.getElementById('photoFile').files[0];
+      
+      if (!name || !contact || !email || !position) {
+        alert("❌ Please fill required fields: Name, Contact, Email, and Position.");
+        return;
+      }
+      if (!cvFile) {
+        alert("❌ Please upload your CV (PDF/DOC/DOCX).");
+        return;
+      }
+      
+      let msg = `✅ Application submitted successfully!\n\nName: ${name}\nPosition: ${position}\nContact: ${contact}\nEmail: ${email}\n`;
+      msg += `Father: ${father || 'N/A'}\nMother: ${mother || 'N/A'}\nEducation: ${education || 'N/A'}\nExperience: ${experience || 'N/A'}\n`;
+      msg += `CV: ${cvFile.name}\nPhoto: ${photoFile ? photoFile.name : 'Not provided'}\n\nOur HR team will contact you soon.`;
+      alert(msg);
+      closeModal();
+      appForm.reset();
+    });
+    
+    // mobile drawer toggle
+    const menuBtn = document.getElementById('mobileMenuBtn');
+    const drawer = document.getElementById('mobileDrawer');
+    if(menuBtn){
+      menuBtn.addEventListener('click', () => {
+        drawer.classList.toggle('hidden');
+        const icon = menuBtn.querySelector('i');
+        if(drawer.classList.contains('hidden')){
+          icon.classList.remove('fa-times');
+          icon.classList.add('fa-bars');
+        } else {
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-times');
+        }
+      });
+    }
+    document.querySelectorAll('#mobileDrawer a').forEach(link => {
+      link.addEventListener('click', () => {
+        drawer.classList.add('hidden');
+        if(menuBtn){
+          const icon = menuBtn.querySelector('i');
+          icon.classList.remove('fa-times');
+          icon.classList.add('fa-bars');
+        }
+      });
+    });
+    // smooth scroll with offset
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const hash = this.getAttribute('href');
+        if(hash === "#" || hash === "") return;
+        const target = document.querySelector(hash);
+        if(target){
+          e.preventDefault();
+          const offset = 75;
+          window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - offset, behavior: 'smooth' });
+          if(!drawer.classList.contains('hidden')) drawer.classList.add('hidden');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
