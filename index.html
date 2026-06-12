@@ -105,7 +105,7 @@
     <section id="departments" class="py-16 bg-gray-50"><div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12"><div class="text-center mb-10"><span class="text-cyan-700 bg-cyan-100 px-4 py-1 rounded-full text-sm font-semibold"><i class="fas fa-building"></i> inside best tycoon</span><h2 class="text-3xl font-bold text-gray-800 mt-4">Departments & Life at Company</h2></div><div class="grid md:grid-cols-3 gap-6"><div class="bg-white p-6 rounded-2xl shadow-sm"><i class="fas fa-microchip text-3xl text-blue-600 mb-3"></i><h3 class="text-xl font-bold">Manufacturing</h3><p class="text-gray-500 text-sm">Production, Engineering, Quality Control</p></div><div class="bg-white p-6 rounded-2xl shadow-sm"><i class="fas fa-users text-3xl text-blue-600 mb-3"></i><h3 class="text-xl font-bold">Human Resources</h3><p class="text-gray-500 text-sm">Talent, Operations, Employee Engagement</p></div><div class="bg-white p-6 rounded-2xl shadow-sm"><i class="fas fa-chart-line text-3xl text-blue-600 mb-3"></i><h3 class="text-xl font-bold">Commercial & Sales</h3><p class="text-gray-500 text-sm">vivo Partner Relations, Marketing</p></div></div><div class="mt-12 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 text-center"><i class="fas fa-camera text-4xl text-blue-500 mb-3"></i><h3 class="text-2xl font-semibold">Life at Best Tycoon</h3><p class="max-w-2xl mx-auto text-gray-600 mt-2">Celebrations, team outings, training sessions, and a supportive family culture. We grow together with vivo’s vision.</p></div></div></section>
 
     <!-- FAQ -->
-    <section id="faq" class="py-16 bg-white"><div class="max-w-4xl mx-auto px-5"><div class="text-center mb-10"><span class="text-purple-700 bg-purple-100 px-4 py-1 rounded-full text-sm"><i class="fas fa-question-circle"></i> help & support</span><h2 class="text-3xl font-bold text-gray-800 mt-3">Frequently Asked Questions</h2></div><div class="space-y-4"><div class="border border-gray-200 rounded-xl p-5 bg-gray-50"><h4 class="font-bold text-gray-800 flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> How can I apply for a position?</h4><p class="text-gray-600 mt-1 text-sm">Click "Apply →" on any job, fill the popup form with your details, CV and photo. Your application will be sent directly to our HR.</p></div><div class="border border-gray-200 rounded-xl p-5 bg-gray-50"><h4 class="font-bold text-gray-800 flex items-center gap-2"><i class="fas fa-clock"></i> What is the recruitment timeline?</h4><p class="text-gray-600 mt-1 text-sm">Usually 2-3 weeks from application to offer. We keep candidates informed at each stage.</p></div><div class="border border-gray-200 rounded-xl p-5 bg-gray-50"><h4 class="font-bold text-gray-800 flex items-center gap-2"><i class="fas fa-laptop"></i> Is there a remote work option?</h4><p class="text-gray-600 mt-1 text-sm">Most roles are based at our Rupgan facility, but some positions offer hybrid flexibility.</p></div></div></div></section>
+    <section id="faq" class="py-16 bg-white"><div class="max-w-4xl mx-auto px-5"><div class="text-center mb-10"><span class="text-purple-700 bg-purple-100 px-4 py-1 rounded-full text-sm"><i class="fas fa-question-circle"></i> help & support</span><h2 class="text-3xl font-bold text-gray-800 mt-3">Frequently Asked Questions</h2></div><div class="space-y-4"><div class="border border-gray-200 rounded-xl p-5 bg-gray-50"><h4 class="font-bold text-gray-800 flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> How can I apply for a position?</h4><p class="text-gray-600 mt-1 text-sm">Click "Apply →" on any job, fill the popup form with your details, CV (PDF/DOC/DOCX) and passport photo (JPG/PNG). Your application will be emailed to our HR team.</p></div><div class="border border-gray-200 rounded-xl p-5 bg-gray-50"><h4 class="font-bold text-gray-800 flex items-center gap-2"><i class="fas fa-clock"></i> What is the recruitment timeline?</h4><p class="text-gray-600 mt-1 text-sm">Usually 2-3 weeks from application to offer. We keep candidates informed at each stage.</p></div><div class="border border-gray-200 rounded-xl p-5 bg-gray-50"><h4 class="font-bold text-gray-800 flex items-center gap-2"><i class="fas fa-laptop"></i> Is there a remote work option?</h4><p class="text-gray-600 mt-1 text-sm">Most roles are based at our Rupgan facility, but some positions offer hybrid flexibility.</p></div></div></div></section>
 
     <!-- FOOTER with correct social links & contact -->
     <footer id="contact" class="bg-gray-900 text-gray-300 pt-14 pb-6">
@@ -121,7 +121,7 @@
     </footer>
   </main>
 
-  <!-- ========== APPLICATION MODAL (Standard HTML form submission to Formspree) ========== -->
+  <!-- ========== APPLICATION MODAL with File Upload Support (FormSubmit.co) ========== -->
   <div id="applicationModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/50 backdrop-blur-sm modal-overlay">
     <div class="bg-white rounded-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto shadow-2xl mx-4 modal-container">
       <div class="sticky top-0 bg-white border-b border-gray-200 px-6 py-4 flex justify-between items-center rounded-t-2xl">
@@ -129,19 +129,23 @@
         <button id="closeModalBtn" class="text-gray-400 hover:text-gray-600 text-2xl">&times;</button>
       </div>
       <div class="p-6">
-        <!-- ✅ DIRECT HTML FORM – no JavaScript fetch, guaranteed to work -->
-        <form id="applicationForm" action="https://formspree.io/f/mgobngja" method="POST" enctype="multipart/form-data">
+        <!-- ✅ Using FormSubmit.co which supports file uploads on free tier -->
+        <form id="applicationForm" action="https://formsubmit.co/recruitment.hr.bdf@vivo.com" method="POST" enctype="multipart/form-data">
+          <!-- Extra options for FormSubmit: redirect to a thank-you page, disable captcha for smoother experience -->
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://besttycoon.com/thankyou.html">
+          <input type="hidden" name="_subject" value="New Job Application from Best Tycoon Career Portal">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-            <div><label class="block text-sm font-semibold text-gray-700">Full Name *</label><input type="text" name="full_name" id="fullName" required class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2"></div>
-            <div><label class="block text-sm font-semibold text-gray-700">Contact Number *</label><input type="tel" name="contact_number" id="contact" required class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2"></div>
-            <div><label class="block text-sm font-semibold text-gray-700">Email Address *</label><input type="email" name="email" id="email" required class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2"></div>
-            <div><label class="block text-sm font-semibold text-gray-700">Father's Name</label><input type="text" name="father_name" id="fatherName" class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2"></div>
-            <div><label class="block text-sm font-semibold text-gray-700">Mother's Name</label><input type="text" name="mother_name" id="motherName" class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2"></div>
-            <div><label class="block text-sm font-semibold text-gray-700">Education (Degree/Institute)</label><input type="text" name="education" id="education" placeholder="e.g. B.Sc in EEE, DIU" class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2"></div>
-            <div class="md:col-span-2"><label class="block text-sm font-semibold text-gray-700">Work Experience (Years & summary)</label><textarea name="experience" id="experience" rows="2" class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2" placeholder="e.g. 2 years as Production Engineer"></textarea></div>
+            <div><label class="block text-sm font-semibold text-gray-700">Full Name *</label><input type="text" name="full_name" required class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2"></div>
+            <div><label class="block text-sm font-semibold text-gray-700">Contact Number *</label><input type="tel" name="contact_number" required class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2"></div>
+            <div><label class="block text-sm font-semibold text-gray-700">Email Address *</label><input type="email" name="email" required class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2"></div>
+            <div><label class="block text-sm font-semibold text-gray-700">Father's Name</label><input type="text" name="father_name" class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2"></div>
+            <div><label class="block text-sm font-semibold text-gray-700">Mother's Name</label><input type="text" name="mother_name" class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2"></div>
+            <div><label class="block text-sm font-semibold text-gray-700">Education (Degree/Institute)</label><input type="text" name="education" placeholder="e.g. B.Sc in EEE, DIU" class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2"></div>
+            <div class="md:col-span-2"><label class="block text-sm font-semibold text-gray-700">Work Experience (Years & summary)</label><textarea name="experience" rows="2" class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2" placeholder="e.g. 2 years as Production Engineer"></textarea></div>
             <div class="md:col-span-2"><label class="block text-sm font-semibold text-gray-700">Applying For Position *</label><select name="applying_position" id="positionSelect" required class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2 bg-white"><option value="">-- Select Position --</option><option value="Production Engineer">Production Engineer</option><option value="HR Officer">HR Officer</option><option value="Factory Supervisor">Factory Supervisor</option><option value="Quality Control Technician">Quality Control Technician</option></select></div>
-            <div><label class="block text-sm font-semibold text-gray-700">Upload CV (PDF/DOC/DOCX) *</label><input type="file" name="cv_file" id="cvFile" accept=".pdf,.doc,.docx" required class="mt-1 w-full border border-gray-300 rounded-xl px-3 py-1.5"></div>
-            <div><label class="block text-sm font-semibold text-gray-700">Passport Size Photo (JPG/PNG)</label><input type="file" name="photo_file" id="photoFile" accept="image/jpeg,image/png" class="mt-1 w-full border border-gray-300 rounded-xl px-3 py-1.5"></div>
+            <div><label class="block text-sm font-semibold text-gray-700">Upload CV (PDF/DOC/DOCX) *</label><input type="file" name="cv_file" accept=".pdf,.doc,.docx" required class="mt-1 w-full border border-gray-300 rounded-xl px-3 py-1.5"></div>
+            <div><label class="block text-sm font-semibold text-gray-700">Passport Size Photo (JPG/PNG)</label><input type="file" name="photo_file" accept="image/jpeg,image/png" class="mt-1 w-full border border-gray-300 rounded-xl px-3 py-1.5"></div>
           </div>
           <div class="mt-6 flex justify-end gap-3">
             <button type="button" id="cancelModalBtn" class="px-5 py-2 border border-gray-300 rounded-full text-gray-700 hover:bg-gray-100">Cancel</button>
@@ -153,7 +157,7 @@
   </div>
 
   <script>
-    // Modal open/close + prefill position (no fetch, just standard form)
+    // Modal open/close + prefill position
     const modal = document.getElementById('applicationModal');
     const closeBtn = document.getElementById('closeModalBtn');
     const cancelBtn = document.getElementById('cancelModalBtn');
@@ -176,7 +180,7 @@
       modal.classList.add('hidden');
       modal.classList.remove('flex');
       document.body.style.overflow = 'auto';
-      form.reset();  // clear form fields when closed
+      form.reset();
     }
     document.querySelectorAll('.apply-job-btn').forEach(btn => {
       btn.addEventListener('click', () => openModalWithPosition(btn.getAttribute('data-position')));
