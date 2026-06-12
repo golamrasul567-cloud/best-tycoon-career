@@ -27,16 +27,6 @@
       background-position: center center;
       background-repeat: no-repeat;
     }
-    .spinner {
-      border: 2px solid rgba(255,255,255,0.3);
-      border-radius: 50%;
-      border-top: 2px solid white;
-      width: 18px;
-      height: 18px;
-      animation: spin 0.6s linear infinite;
-      display: inline-block;
-    }
-    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
   </style>
 </head>
 <body class="antialiased">
@@ -80,7 +70,7 @@
   </header>
 
   <main>
-    <!-- HERO -->
+    <!-- HERO SECTION -->
     <section id="home" class="hero-bg text-white relative overflow-hidden">
       <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-20 md:py-28 flex flex-col md:flex-row items-center justify-between gap-10">
         <div class="flex-1 text-center md:text-left">
@@ -101,7 +91,7 @@
     <!-- WHY WORK WITH US -->
     <section class="py-20 bg-white"><div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12"><div class="text-center mb-12"><span class="text-blue-700 font-semibold text-sm bg-blue-100 px-4 py-1.5 rounded-full"><i class="fas fa-star mr-1"></i> Why Work With Us?</span><h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-4">A workplace that empowers you</h2><p class="text-gray-500 max-w-2xl mx-auto mt-2">We invest in your success — from career growth to well-being.</p></div><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7"><div class="benefit-card bg-gray-50 p-6 rounded-2xl border border-gray-100 text-center shadow-sm"><div class="w-14 h-14 bg-blue-100 text-blue-700 rounded-xl flex items-center justify-center mx-auto mb-4"><i class="fas fa-chart-line text-2xl"></i></div><h3 class="text-xl font-bold text-gray-800">Career Growth Opportunities</h3><p class="text-gray-500 text-sm mt-2">Internal promotions, leadership tracks, and cross-functional projects.</p></div><div class="benefit-card bg-gray-50 p-6 rounded-2xl border border-gray-100 text-center shadow-sm"><div class="w-14 h-14 bg-amber-100 text-amber-700 rounded-xl flex items-center justify-center mx-auto mb-4"><i class="fas fa-graduation-cap text-2xl"></i></div><h3 class="text-xl font-bold text-gray-800">Learning & Development</h3><p class="text-gray-500 text-sm mt-2">Certifications, workshops, and vivo training programs.</p></div><div class="benefit-card bg-gray-50 p-6 rounded-2xl border border-gray-100 text-center shadow-sm"><div class="w-14 h-14 bg-emerald-100 text-emerald-700 rounded-xl flex items-center justify-center mx-auto mb-4"><i class="fas fa-coins text-2xl"></i></div><h3 class="text-xl font-bold text-gray-800">Competitive Compensation</h3><p class="text-gray-500 text-sm mt-2">Attractive salary, performance bonuses, and annual increments.</p></div><div class="benefit-card bg-gray-50 p-6 rounded-2xl border border-gray-100 text-center shadow-sm"><div class="w-14 h-14 bg-purple-100 text-purple-700 rounded-xl flex items-center justify-center mx-auto mb-4"><i class="fas fa-users text-2xl"></i></div><h3 class="text-xl font-bold text-gray-800">Inclusive Work Environment</h3><p class="text-gray-500 text-sm mt-2">Collaborative culture, diversity, and respect for every voice.</p></div><div class="benefit-card bg-gray-50 p-6 rounded-2xl border border-gray-100 text-center shadow-sm"><div class="w-14 h-14 bg-rose-100 text-rose-600 rounded-xl flex items-center justify-center mx-auto mb-4"><i class="fas fa-heartbeat text-2xl"></i></div><h3 class="text-xl font-bold text-gray-800">Health & Welfare Benefits</h3><p class="text-gray-500 text-sm mt-2">Medical insurance, wellness programs, and employee assistance.</p></div><div class="benefit-card bg-gray-50 p-6 rounded-2xl border border-gray-100 text-center shadow-sm"><div class="w-14 h-14 bg-indigo-100 text-indigo-700 rounded-xl flex items-center justify-center mx-auto mb-4"><i class="fas fa-trophy text-2xl"></i></div><h3 class="text-xl font-bold text-gray-800">Recognition & Rewards</h3><p class="text-gray-500 text-sm mt-2">Employee of the month, spot awards, and annual galas.</p></div></div></div></section>
 
-    <!-- JOB LISTINGS -->
+    <!-- JOB LISTINGS TABLE -->
     <section id="jobs" class="py-20 bg-gray-50"><div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12"><div class="text-center mb-10"><span class="text-blue-700 font-semibold text-sm bg-blue-100 px-4 py-1.5 rounded-full"><i class="fas fa-briefcase"></i> open positions</span><h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-4">Current Job Opportunities</h2><p class="text-gray-500 max-w-2xl mx-auto mt-2">Join our dynamic team at Rupgan, Narayanganj — be part of vivo’s success story.</p></div><div class="job-table-wrapper bg-white rounded-2xl shadow-md border border-gray-100 p-1"><table class="job-table w-full text-left border-collapse"><thead class="bg-gray-100 text-gray-700 rounded-t-2xl"><tr><th class="px-6 py-4 text-sm font-semibold">Position</th><th class="px-6 py-4 text-sm font-semibold">Department</th><th class="px-6 py-4 text-sm font-semibold">Location</th><th class="px-6 py-4 text-sm font-semibold">Deadline</th><th class="px-6 py-4 text-sm font-semibold text-center">Action</th></tr></thead><tbody class="divide-y divide-gray-100"><tr><td class="px-6 py-4 font-medium text-gray-800">Production Engineer</td><td class="px-6 py-4 text-gray-600">Manufacturing</td><td class="px-6 py-4 text-gray-600">Rupgan, Narayanganj</td><td class="px-6 py-4 text-gray-500">30 June, 2025</td><td class="px-6 py-4 text-center"><button class="apply-job-btn bg-blue-50 hover:bg-blue-700 text-blue-700 hover:text-white px-4 py-1.5 rounded-full text-sm font-medium transition" data-position="Production Engineer">Apply →</button></td></tr>
         <tr><td class="px-6 py-4 font-medium text-gray-800">HR Officer</td><td class="px-6 py-4 text-gray-600">Human Resources</td><td class="px-6 py-4 text-gray-600">Rupgan, Narayanganj</td><td class="px-6 py-4 text-gray-500">15 July, 2025</td><td class="px-6 py-4 text-center"><button class="apply-job-btn bg-blue-50 hover:bg-blue-700 text-blue-700 hover:text-white px-4 py-1.5 rounded-full text-sm font-medium transition" data-position="HR Officer">Apply →</button></td></tr>
         <tr><td class="px-6 py-4 font-medium text-gray-800">Factory Supervisor</td><td class="px-6 py-4 text-gray-600">Operations</td><td class="px-6 py-4 text-gray-600">Rupgan, Narayanganj</td><td class="px-6 py-4 text-gray-500">30 June, 2025</td><td class="px-6 py-4 text-center"><button class="apply-job-btn bg-blue-50 hover:bg-blue-700 text-blue-700 hover:text-white px-4 py-1.5 rounded-full text-sm font-medium transition" data-position="Factory Supervisor">Apply →</button></td></tr>
@@ -117,7 +107,7 @@
     <!-- FAQ -->
     <section id="faq" class="py-16 bg-white"><div class="max-w-4xl mx-auto px-5"><div class="text-center mb-10"><span class="text-purple-700 bg-purple-100 px-4 py-1 rounded-full text-sm"><i class="fas fa-question-circle"></i> help & support</span><h2 class="text-3xl font-bold text-gray-800 mt-3">Frequently Asked Questions</h2></div><div class="space-y-4"><div class="border border-gray-200 rounded-xl p-5 bg-gray-50"><h4 class="font-bold text-gray-800 flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> How can I apply for a position?</h4><p class="text-gray-600 mt-1 text-sm">Click "Apply →" on any job, fill the popup form with your details, CV and photo. Your application will be sent directly to our HR.</p></div><div class="border border-gray-200 rounded-xl p-5 bg-gray-50"><h4 class="font-bold text-gray-800 flex items-center gap-2"><i class="fas fa-clock"></i> What is the recruitment timeline?</h4><p class="text-gray-600 mt-1 text-sm">Usually 2-3 weeks from application to offer. We keep candidates informed at each stage.</p></div><div class="border border-gray-200 rounded-xl p-5 bg-gray-50"><h4 class="font-bold text-gray-800 flex items-center gap-2"><i class="fas fa-laptop"></i> Is there a remote work option?</h4><p class="text-gray-600 mt-1 text-sm">Most roles are based at our Rupgan facility, but some positions offer hybrid flexibility.</p></div></div></div></section>
 
-    <!-- FOOTER -->
+    <!-- FOOTER with correct social links & contact -->
     <footer id="contact" class="bg-gray-900 text-gray-300 pt-14 pb-6">
       <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         <div class="grid md:grid-cols-4 gap-8">
@@ -131,7 +121,7 @@
     </footer>
   </main>
 
-  <!-- ========== APPLICATION MODAL (Formspree endpoint corrected) ========== -->
+  <!-- ========== APPLICATION MODAL (Standard HTML form submission to Formspree) ========== -->
   <div id="applicationModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/50 backdrop-blur-sm modal-overlay">
     <div class="bg-white rounded-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto shadow-2xl mx-4 modal-container">
       <div class="sticky top-0 bg-white border-b border-gray-200 px-6 py-4 flex justify-between items-center rounded-t-2xl">
@@ -139,7 +129,7 @@
         <button id="closeModalBtn" class="text-gray-400 hover:text-gray-600 text-2xl">&times;</button>
       </div>
       <div class="p-6">
-        <!-- ✅ CORRECTED Formspree endpoint: formspree.io (NOT formspre.io) -->
+        <!-- ✅ DIRECT HTML FORM – no JavaScript fetch, guaranteed to work -->
         <form id="applicationForm" action="https://formspree.io/f/mgobngja" method="POST" enctype="multipart/form-data">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div><label class="block text-sm font-semibold text-gray-700">Full Name *</label><input type="text" name="full_name" id="fullName" required class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2"></div>
@@ -155,7 +145,7 @@
           </div>
           <div class="mt-6 flex justify-end gap-3">
             <button type="button" id="cancelModalBtn" class="px-5 py-2 border border-gray-300 rounded-full text-gray-700 hover:bg-gray-100">Cancel</button>
-            <button type="submit" id="submitBtn" class="px-6 py-2 bg-blue-700 hover:bg-blue-800 text-white rounded-full font-semibold shadow-md flex items-center gap-2">Submit Application</button>
+            <button type="submit" class="px-6 py-2 bg-blue-700 hover:bg-blue-800 text-white rounded-full font-semibold shadow-md">Submit Application</button>
           </div>
         </form>
       </div>
@@ -163,19 +153,21 @@
   </div>
 
   <script>
+    // Modal open/close + prefill position (no fetch, just standard form)
     const modal = document.getElementById('applicationModal');
-    const closeModalBtn = document.getElementById('closeModalBtn');
-    const cancelModalBtn = document.getElementById('cancelModalBtn');
+    const closeBtn = document.getElementById('closeModalBtn');
+    const cancelBtn = document.getElementById('cancelModalBtn');
     const positionSelect = document.getElementById('positionSelect');
     const form = document.getElementById('applicationForm');
-    const submitBtn = document.getElementById('submitBtn');
 
-    function openModalWithPosition(position = null) {
+    function openModalWithPosition(position) {
       modal.classList.remove('hidden');
       modal.classList.add('flex');
       document.body.style.overflow = 'hidden';
-      if (position && positionSelect.querySelector(`option[value="${position}"]`)) {
-        positionSelect.value = position;
+      if (position) {
+        const option = Array.from(positionSelect.options).find(opt => opt.value === position);
+        if (option) positionSelect.value = position;
+        else positionSelect.value = "";
       } else {
         positionSelect.value = "";
       }
@@ -184,58 +176,16 @@
       modal.classList.add('hidden');
       modal.classList.remove('flex');
       document.body.style.overflow = 'auto';
-      form.reset();
+      form.reset();  // clear form fields when closed
     }
     document.querySelectorAll('.apply-job-btn').forEach(btn => {
       btn.addEventListener('click', () => openModalWithPosition(btn.getAttribute('data-position')));
     });
-    closeModalBtn.addEventListener('click', closeModal);
-    cancelModalBtn.addEventListener('click', closeModal);
+    closeBtn.addEventListener('click', closeModal);
+    cancelBtn.addEventListener('click', closeModal);
     modal.addEventListener('click', (e) => { if(e.target === modal) closeModal(); });
 
-    // Submit with fetch to the CORRECTED Formspree endpoint
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const name = document.getElementById('fullName').value.trim();
-      const contact = document.getElementById('contact').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const position = positionSelect.value;
-      const cvFile = document.getElementById('cvFile').files[0];
-      if (!name || !contact || !email || !position) {
-        alert("❌ Please fill required fields: Name, Contact, Email, and Position.");
-        return;
-      }
-      if (!cvFile) {
-        alert("❌ Please upload your CV (PDF/DOC/DOCX).");
-        return;
-      }
-      const originalText = submitBtn.innerHTML;
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = '<span class="spinner"></span> Sending...';
-      const formData = new FormData(form);
-      try {
-        const response = await fetch('https://formspree.io/f/mgobngja', {
-          method: 'POST',
-          body: formData
-        });
-        if (response.ok) {
-          alert("✅ Your application has been submitted successfully! Our HR team will review and contact you soon.");
-          closeModal();
-        } else {
-          const errorText = await response.text();
-          console.error("Formspree error:", errorText);
-          alert("⚠️ Submission failed. Please try again later or contact us directly via email.");
-        }
-      } catch (error) {
-        console.error("Network error:", error);
-        alert("❌ Network error. Please check your connection and try again.");
-      } finally {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = originalText;
-      }
-    });
-
-    // Mobile menu
+    // Mobile menu toggle
     const menuBtn = document.getElementById('mobileMenuBtn');
     const drawer = document.getElementById('mobileDrawer');
     if(menuBtn){
@@ -252,6 +202,7 @@
         if(menuBtn){ const icon = menuBtn.querySelector('i'); icon.classList.remove('fa-times'); icon.classList.add('fa-bars'); }
       });
     });
+    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         const hash = this.getAttribute('href');
